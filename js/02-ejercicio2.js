@@ -8,6 +8,8 @@
 8-9: Notable
 10: Sobresaliente
 
+Si ingreso un número que no esté dentro del rango de 0 a 10 mostrar un mensaje de “número erróneo”. Si el número ingresado no es válido mostrar el mensaje “Introduce un número válido”.
+
 */
 
 // solicitar la nota de 0 a 10
@@ -33,4 +35,8 @@ if (nota >= 8 && nota <= 9) {
 }
 if (nota === 10) {
   document.write("Sobresaliente");
+} else if (nota != 10) {
+  document.write("Numero Erroneo");
+} else {
+  document.write("Introduce un numero valido");
 }
