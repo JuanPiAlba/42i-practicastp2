@@ -6,17 +6,19 @@ Dificultad:  🟢🟡
 // pedir numeros hastas hastas precionar cancelar
 //!= numero ALERT y seguir pidienod numeros
 //CANCELAR indicar RESULTADO
-
+let numero = 0;
 let suma = 0;
-
+let numero2 = 0;
 do {
-  let numero = prompt("Ingrese un Numero");
+  numero = prompt("Introduce un numero");
+  numero = parseInt(numero);
 
-  if (numero = numero) {
-    suma = suma + numero;
+  //si lo que ingresa por paramentro es entero
+  if (Number.isInteger(numero2)) {
+    suma += numero;
   } else {
-    if (numero != undefined) alert("Usted no ingreso un numero");
+    alert(numero + " No es un numero");
+    numero = 0;
   }
-} while (numero != undefined);
-
+} while (numero == undefined);
 document.write(suma);
