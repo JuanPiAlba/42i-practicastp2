@@ -6,19 +6,28 @@ Dificultad:  🟢🟡
 // pedir numeros hastas hastas precionar cancelar
 //!= numero ALERT y seguir pidienod numeros
 //CANCELAR indicar RESULTADO
-let numero = 0;
-let suma = 0;
-let numero2 = 0;
-do {
-  numero = prompt("Introduce un numero");
-  numero = parseInt(numero);
 
-  //si lo que ingresa por paramentro es entero
-  if (Number.isInteger(numero2)) {
-    suma += numero;
-  } else {
-    alert(numero + " No es un numero");
-    numero = 0;
+let suma = 0;
+let numero = 0;
+//BUCLE DO WHILE PARA INTRODUCIR VARIOS
+do {
+  //PEDIMOS EL NÚMERO POR TECLADO
+  numero = prompt("Introduce un numero");
+  //COMPROBAMOS QUE LO INTRODUCIDO ES UN NÚMERO
+  if (Number(numero) == numero) {
+    //CONVERTIMOS EL NÚMERO EN INTEGER (POR SI ACASO)
+    numero = Number(numero);
+    //SUMAMOS LO QUE HAY EN LA VARIABLE SUMA CON ESE NÚMERO
+    suma = suma + numero;
   }
-} while (numero == undefined);
+  //SI LO INTRODUCIDO NO ES UN NÚMERO
+  else {
+    //SI SE PULSÓ ACEPTAR SIN PONER UN NÚMERO VÁLIDO
+    if (numero != undefined) {
+      alert(numero + " No es un numero");
+    }
+  }
+  //VOLVEMOS ARRIBA MIENTRAS NO SE PULSE CANCELAR
+} while (numero != undefined);
+//SI SE PULSÓ CANCELAR SALE DEL BUCLE E IMPRIME EL RESULTADO
 document.write(suma);
